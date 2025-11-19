@@ -6,29 +6,48 @@ const Header = () => {
     { text: 'Marketing', link: '/marketing' },
     { text: 'Suporte ao usuário', link: '/support' },
     { text: 'Política de Privacidade', link: '/privacy-policy' },
-
   ];
 
   return (
-    <AppBar position="static">
-      <Toolbar>
+    <AppBar 
+      position="static"
+      elevation={0}
+      sx={{
+        background: '#ffffff',
+        borderBottom: '1px solid #e0e0e0',
+      }}
+    >
+      <Toolbar sx={{ py: 1.5, px: 4 }}>
         {/* Logo e Nome */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Avatar 
-            alt="Logo CamMove" 
-            src="/src/assets/logo_1024.png"
-            sx={{ width: 40, height: 40 }}
-          />
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: 2,
+            cursor: 'pointer',
+            transition: 'transform 0.2s',
+            '&:hover': {
+              transform: 'scale(1.02)',
+            }
+          }}
+        >
+         <Avatar 
+              alt="Logo CamMove" 
+              src="/src/assets/logo_1024.png"
+              sx={{ 
+                width: 38, 
+                height: 38,
+              }}
+            />
           <Typography 
-            variant="h6" 
-            component="div"
-            sx={{ fontWeight: 600 }}
+            variant="h5" 
+            color="primary"            
           >
             CamMove
           </Typography>
         </Box>
 
-        {/* Espaçador para empurrar os itens para a direita */}
+        {/* Espaçador */}
         <Box sx={{ flexGrow: 1 }} />
 
         {/* Menu de Navegação */}
@@ -38,11 +57,34 @@ const Header = () => {
               key={item.link}
               href={item.link}
               sx={{ 
-                color: 'white',
+                color: '#64748b',
                 textTransform: 'none',
                 fontSize: '0.95rem',
+                fontWeight: 600,
+                px: 3,
+                py: 1.2,
+                borderRadius: '10px',
+                position: 'relative',
+                transition: 'all 0.3s ease',
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#8b5cf6',
+                  backgroundColor: '#f8f7ff',
+                  transform: 'translateY(-2px)',
+                },
+                '&:after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: '50%',
+                  width: 0,
+                  height: '3px',
+                  background: 'linear-gradient(90deg, #6366f1, #8b5cf6)',
+                  transform: 'translateX(-50%)',
+                  transition: 'width 0.3s ease',
+                  borderRadius: '2px',
+                },
+                '&:hover:after': {
+                  width: '70%',
                 }
               }}
             >
