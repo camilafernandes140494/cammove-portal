@@ -13,6 +13,7 @@ export default function Marketing() {
         alignItems: "center",
         justifyContent: "center",
         background: "linear-gradient(135deg, rgba(106, 27, 154, 0.95), rgba(0, 0, 0, 0.95))",
+        padding: { xs: 4, md: 8}
   
       }}>
         <Box sx={{
@@ -105,7 +106,7 @@ export default function Marketing() {
         {/* SEÇÃO PERSONAL */}
         <Box sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "1fr", lg: "1fr 1fr" },
+          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           gap: { xs: 4, md: 6 },
           alignItems: "center",
           mb: { xs: 12, md: 16 },
@@ -203,7 +204,7 @@ export default function Marketing() {
         {/* SEÇÃO ALUNO */}
         <Box sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "1fr", lg: "1fr 1fr" },
+          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           gap: { xs: 4, md: 6 },
           alignItems: "center",
           maxWidth: "75rem",
