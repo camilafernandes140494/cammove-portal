@@ -1,5 +1,6 @@
 // Header.tsx
 import { AppBar, Avatar, Box, Button, Toolbar, Typography } from "@mui/material";
+import LogoImage from '../assets/logo_1024_round.png';
 
 const Header = () => { 
   const navItems = [
@@ -33,7 +34,7 @@ const Header = () => {
         >
          <Avatar 
               alt="Logo CamMove" 
-              src="/src/assets/logo_1024.png"
+              src={LogoImage}
               sx={{ 
                 width: 38, 
                 height: 38,
