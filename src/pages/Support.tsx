@@ -4,6 +4,8 @@ import { Email, Instagram, WhatsApp, AccessTime } from "@mui/icons-material";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import emailjs from '@emailjs/browser';
+import supportImage from '../assets/support.png';
+
 
 export default function Support() {
   const [formData, setFormData] = useState({
@@ -62,10 +64,20 @@ export default function Support() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4} maxWidth="lg" mx="auto">
-        {/* Formulário de Contato */}
-        <Grid container spacing={2}>
-          <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3 }}>
+<Box sx={{ maxWidth: '70%', width: '100%', mx: 'auto' }}>
+  {/* Formulário de Contato */} 
+  
+          <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3,}}>
+             <Box sx={{ width: '100%', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, alignItems: 'center', gap: 4 }}>
+              <Box sx={{ display:'flex', justifyContent:'center'}}>
+                <img src={supportImage}alt={'Animação suporte'}   style={{ 
+    width: '100%',
+    maxWidth: '30rem',
+    borderRadius: '2rem',
+
+  }}/>
+              </Box>
+               
             <CardContent>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 3, color: "#fff" }}>
                 Envie sua Mensagem
@@ -138,13 +150,18 @@ export default function Support() {
                 </Button>
               </Box>
             </CardContent>
+             </Box>
           </Card>
-        </Grid>
+       
+        
+    
+        
 
         {/* Informações de Contato */}
         <Box sx={{ width: '100%', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' }, gap: 3, mt: 4 }}>
           {/* Email de Suporte */}
           <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3, mb: 3 , height: '100%'}}>
+             
             <CardContent>
               <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                 <Email sx={{ fontSize: 40, mr: 2, color: "#ce93d8" }} />
@@ -199,7 +216,7 @@ export default function Support() {
             </CardContent>
           </Card>
         </Box>
-      </Grid>
+        </Box>
     </Box>
   );
 }
