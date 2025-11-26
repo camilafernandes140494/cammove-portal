@@ -7,82 +7,306 @@ export default function Marketing() {
   return (
     <Box sx={{background: "linear-gradient(to bottom, #6a1b9a, #000)", color: "#fff", overflow: "hidden" }}>
       {/* HERO */}
-      <Box sx={{
-        minHeight: "70vh",
+          <Box
+      sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         background: "linear-gradient(135deg, rgba(106, 27, 154, 0.95), rgba(0, 0, 0, 0.95))",
-        padding: { xs: 4, md: 8}
-  
-      }}>
-        <Box sx={{
+        padding: { xs: "3rem 1.5rem", sm: "4rem 2rem", md: "8rem 4rem" },
+      }}
+    >
+      <Box
+        sx={{
           display: "grid",
           gridTemplateColumns: { xs: "1fr", lg: "1fr 1fr" },
-          gap: { xs: 4, md: 6 },
+          gap: { xs: 3, sm: 4, md: 6 },
           alignItems: "center",
-          maxWidth: "75rem",
           width: "100%",
-        }}>
-          {/* Conteúdo */}
-          <Box>
-            <Typography variant="h2" sx={{
+          maxWidth: "80rem",
+        }}
+      >
+        {/* Conteúdo */}
+        <Box sx={{ order: { xs: 2, lg: 1 } }}>
+          <Typography
+            variant="h2"
+            sx={{
               fontWeight: 900,
               mb: 2,
-              fontSize: { xs: "2.5rem", md: "3.5rem" },
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" },
               background: "linear-gradient(135deg, #bb86fc, #fff)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-            }}>
-              CamMove
-            </Typography>
-            <Typography variant="h6" sx={{
-              mb: 4,
-              fontSize: { xs: "1rem", md: "1.2rem" },
-              lineHeight: 1.8,
+              lineHeight: 1.2,
+            }}
+          >
+            CamMove
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              mb: 3,
+              fontSize: { xs: "0.95rem", sm: "1rem", md: "1.2rem" },
+              lineHeight: 1.7,
               opacity: 0.95,
               fontWeight: 300,
-            }}>
-              A plataforma que conecta personal trainers e alunos com treinos personalizados, avaliações completas e gestão inteligente do progresso.
-            </Typography>
-            <Button variant="contained" sx={{
+              color: "#fff",
+            }}
+          >
+            A plataforma que conecta personal trainers e alunos com treinos
+            personalizados, avaliações completas e gestão inteligente do
+            progresso.
+          </Typography>
+
+          <Button
+            variant="contained"
+            sx={{
               background: "linear-gradient(135deg, #bb86fc, #9c27b0)",
               color: "#fff",
-              size: "large",
               borderRadius: "12px",
-              padding: "14px 40px",
-              fontSize: "1.1rem",
+              padding: { xs: "12px 32px", md: "14px 40px" },
+              fontSize: { xs: "1rem", md: "1.1rem" },
               fontWeight: 600,
               textTransform: "none",
               transition: "all 0.3s ease",
+              width: { xs: "100%", sm: "auto" },
               "&:hover": {
                 transform: "translateY(-3px)",
                 boxShadow: "0 20px 40px rgba(187, 134, 252, 0.3)",
               },
-            }}>
-              Baixar App
-            </Button>
-          </Box>
-     
-          {/* Imagem */}
-          <Box sx={{
+            }}
+          >
+            Baixar App
+          </Button>
+        </Box>
+
+        {/* Imagem */}
+        <Box
+          sx={{
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
+            order: { xs: 1, lg: 2 },
+            mb: { xs: 2, lg: 0 },
             animation: "float 6s ease-in-out infinite",
             "@keyframes float": {
               "0%, 100%": { transform: "translateY(0px)" },
               "50%": { transform: "translateY(-20px)" },
             },
+          }}
+        >
+          <img
+            src={marketingImage}
+            alt="CamMove App"
+            style={{
+              maxWidth: "100%",
+              width: "100%",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
+      </Box>
+    </Box>
+
+ {/* PRICING */}
+      <Box sx={{
+        py: { xs: 8, md: 12 },
+        px: { xs: 2, md: 4 },
+        background: "linear-gradient(135deg, rgba(106, 27, 154, 0.1), rgba(0, 0, 0, 0.3))",
+        borderTop: "1px solid rgba(187, 134, 252, 0.2)",
+      }}>
+        <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
+          {/* Header */}
+          <Box sx={{ textAlign: "center", mb: 8 }}>
+            <Typography variant="h3" sx={{
+              fontWeight: 800,
+              mb: 2,
+              fontSize: { xs: "2rem", md: "2.8rem" },
+            }}>
+              Preços Especiais
+            </Typography>
+            <Typography sx={{
+              fontSize: { xs: "1rem", md: "1.1rem" },
+              opacity: 0.8,
+              color: "#e0e0e0",
+            }}>
+              Aproveite nossa promoção de lançamento e comece sua jornada
+            </Typography>
+          </Box>
+
+          {/* Pricing Card */}
+          <Box sx={{
+            display: "flex",
+            justifyContent: "center",
           }}>
-            <img src={marketingImage} alt="CamMove App" style={{
-              maxWidth: "60rem",
-       
-            }} />
+            <Card sx={{
+              background: "linear-gradient(135deg, rgba(187, 134, 252, 0.15), rgba(156, 39, 176, 0.1))",
+              border: "2px solid rgba(187, 134, 252, 0.5)",
+              borderRadius: "20px",
+              p: { xs: 4, md: 6 },
+              maxWidth: "500px",
+              width: "100%",
+              position: "relative",
+              overflow: "hidden",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                borderColor: "rgba(187, 134, 252, 0.8)",
+                boxShadow: "0 20px 60px rgba(187, 134, 252, 0.2)",
+              },
+            }}>
+              {/* Badge de Promoção */}
+              <Box sx={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                background: "linear-gradient(135deg, #ff6b6b, #ff8787)",
+                color: "#fff",
+                px: 3,
+                py: 1,
+                borderRadius: "0 20px 0 20px",
+                fontWeight: 700,
+                fontSize: "0.85rem",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+              }}>
+                Promoção
+              </Box>
+
+              {/* Conteúdo */}
+              <Box sx={{ textAlign: "center" }}>
+                <Typography variant="h5" sx={{
+                  fontWeight: 700,
+                  mb: 3,
+                  color: "#bb86fc",
+                  fontSize: "1.5rem",
+                }}>
+                  CamMove Premium
+                </Typography>
+
+                {/* Preço */}
+                <Box sx={{ mb: 3 }}>
+                  <Box sx={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 1, mb: 1 }}>
+                    <Typography sx={{
+                      fontSize: "0.9rem",
+                      opacity: 0.7,
+                      color: "#e0e0e0",
+                      textDecoration: "line-through",
+                    }}>
+                      R$ 59,99
+                    </Typography>
+                    <Typography sx={{
+                      fontSize: "0.85rem",
+                      background: "rgba(255, 107, 107, 0.2)",
+                      color: "#ff8787",
+                      px: 1.5,
+                      py: 0.5,
+                      borderRadius: "6px",
+                      fontWeight: 600,
+                    }}>
+                      -50%
+                    </Typography>
+                  </Box>
+                  <Typography sx={{
+                    fontSize: { xs: "2.5rem", md: "3rem" },
+                    fontWeight: 900,
+                    color: "#fff",
+                  }}>
+                    R$ 29,99
+                  </Typography>
+                  <Typography sx={{
+                    fontSize: "0.9rem",
+                    opacity: 0.7,
+                    color: "#bb86fc",
+                    mt: 1,
+                  }}>
+                    por mês
+                  </Typography>
+                </Box>
+
+                {/* Divider */}
+                <Box sx={{
+                  height: "1px",
+                  background: "rgba(187, 134, 252, 0.3)",
+                  my: 3,
+                }} />
+
+                {/* Features */}
+                <Box sx={{ mb: 4, display: "flex", flexDirection: "column", gap: 1.5 }}>
+                  {[
+                    "Acesso completo a todos os exercícios",
+                    "Criação de treinos personalizados",
+                    "Criação de avaliações físicas personalizadas",
+                    "Agendamentos e lembretes",
+                    "Suporte ao cliente",
+                    "Sincronização em tempo real entre dispositivos",
+                  ].map((feature, i) => (
+                    <Box key={i} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                      <Box sx={{
+                        width: "6px",
+                        height: "6px",
+                        borderRadius: "50%",
+                        background: "#bb86fc",
+                      }} />
+                      <Typography sx={{
+                        fontSize: "0.95rem",
+                        color: "#e0e0e0",
+                      }}>
+                        {feature}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Box>
+
+                {/* Aviso Promocional */}
+                <Box sx={{
+                  background: "rgba(187, 134, 252, 0.1)",
+                  border: "1px solid rgba(187, 134, 252, 0.3)",
+                  borderRadius: "12px",
+                  p: 2,
+                  mb: 4,
+                }}>
+                  <Typography sx={{
+                    fontSize: "0.85rem",
+                    color: "#bb86fc",
+                    fontWeight: 600,
+                  }}>
+                    ⏰ Oferta por tempo limitado!
+                  </Typography>
+                  <Typography sx={{
+                    fontSize: "0.8rem",
+                    color: "#e0e0e0",
+                    opacity: 0.8,
+                    mt: 0.5,
+                  }}>
+                    Aproveite o preço promocional de lançamento
+                  </Typography>
+                </Box>
+
+                {/* CTA Button */}
+                <Button variant="contained" fullWidth sx={{
+                  background: "linear-gradient(135deg, #bb86fc, #9c27b0)",
+                  color: "#fff",
+                  borderRadius: "12px",
+                  padding: "14px 32px",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  textTransform: "none",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 20px 40px rgba(187, 134, 252, 0.3)",
+                  },
+                }}>
+                  Baixar CamMove Agora
+                </Button>
+              </Box>
+            </Card>
           </Box>
         </Box>
       </Box>
-
       {/* FEATURES */}
       <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
         <Typography variant="h3" sx={{
