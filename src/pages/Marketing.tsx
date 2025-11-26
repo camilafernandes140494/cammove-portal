@@ -491,14 +491,7 @@ export default function Marketing() {
                 border: "1px solid rgba(187, 134, 252, 0.4)",
                 borderRadius: "16px",
                 display: "flex",
-                gap: 2.5,
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                "&:hover": {
-                  background: "rgba(187, 134, 252, 0.3)",
-                  borderColor: "rgba(187, 134, 252, 0.6)",
-                  transform: "translateX(-8px)",
-                },
+                gap: 2.5,               
               }}>
                 <Box sx={{
                   fontSize: "2rem",
