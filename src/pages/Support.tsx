@@ -53,7 +53,7 @@ export default function Support() {
     sendEmailMutation.mutate(formData);
   };
   return (
-    <Box sx={{ minHeight: "100vh", background: "linear-gradient(to bottom, #6a1b9a, #000)", color: "#fff", py: 8, px: 4 }}>
+    <Box sx={{  background: "linear-gradient(to bottom, #6a1b9a, #000)", color: "#fff", py: 8, px: 4 }}>
       {/* Header */}
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h3" sx={{ fontWeight: "bold", mb: 2 }}>
@@ -64,7 +64,7 @@ export default function Support() {
         </Typography>
       </Box>
 
-<Box sx={{ maxWidth: '70%', width: '100%', mx: 'auto' }}>
+<Box sx={{ maxWidth: {sm:'100%',md:'70%'}, width: '100%', mx: 'auto' }}>
   {/* Formulário de Contato */} 
   
           <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3,}}>
@@ -160,23 +160,21 @@ export default function Support() {
         {/* Informações de Contato */}
         <Box sx={{ width: '100%', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' }, gap: 3, mt: 4 }}>
           {/* Email de Suporte */}
-          <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3, mb: 3 , height: '100%'}}>
-             
-            <CardContent>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                <Email sx={{ fontSize: 40, mr: 2, color: "#ce93d8" }} />
-                <Box >
-                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fff" }}>
-                    Email de Suporte
-                  </Typography>
-                  <Link href="mailto:app.cammove@gmail.com" sx={{ color: "#ce93d8", textDecoration: "none" }}>
-                    app.cammove@gmail.com
-
-                  </Link>
-                </Box>
-              </Box>
-            </CardContent>
-          </Card>
+ <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3, mb: 3, height: '100%'}}>
+  <CardContent>
+    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+      <Email sx={{ fontSize: 40, color: "#ce93d8", flexShrink: 0 }} />
+      <Box sx={{ minWidth: 0, flex: 1 }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fff" }}>
+          Email de Suporte
+        </Typography>
+        <Link href="mailto:app.cammove@gmail.com" sx={{ color: "#ce93d8", textDecoration: "none", wordBreak: "break-word" }}>
+          app.cammove@gmail.com
+        </Link>
+      </Box>
+    </Box>
+  </CardContent>
+</Card>
 
           {/* Tempo de Resposta */}
           <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 3, p: 3, mb: 3 , height: '100%'}}>
@@ -205,10 +203,9 @@ export default function Support() {
                 <Link href="https://instagram.com/app.cammove" target="_blank" sx={{ color: "#ce93d8" }}>
                   <Instagram sx={{ fontSize: 40 }} />
                 </Link>
-               <Link href="https://instagram.com/cammove" target="_blank" sx={{ color: "#ce93d8" }}>
-                      <WhatsApp sx={{ fontSize: 40 }} />
-              </Link>
-      
+         <Link href="https://wa.me/5511987654321?text=Olá%20CamMove%21" target="_blank" sx={{ color: "#ce93d8" }}>
+  <WhatsApp sx={{ fontSize: 40 }} />
+</Link>
               </Box>
               <Typography variant="body2" sx={{ mt: 2, opacity: 0.8, color: "#fff" }}>
                 Siga-nos para dicas, atualizações e novidades!
