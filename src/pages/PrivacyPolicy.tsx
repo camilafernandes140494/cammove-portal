@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
   return(
   <Box  m={4}>
     <Typography variant="h4" gutterBottom>
-      Política de Privacidade
+      {termsOfUse?.content.title}
     </Typography>
 	
 
@@ -29,8 +29,6 @@ const PrivacyPolicy = () => {
 							) : (
 								<>
 					
-									    <Typography variant="h5">{termsOfUse?.content.title}</Typography>
-
 									{termsOfUse?.content.intro?.map(
 										(paragraph: string, idx: number) => (
 											<Typography key={`intro-${idx}`} style={{ marginTop: 8, marginBottom: 8 }}>
