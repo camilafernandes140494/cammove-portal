@@ -1,7 +1,10 @@
-import { Box, Button, Typography, Card } from "@mui/material";
+import { Box, Typography, Card } from "@mui/material";
 import marketingImage from '../assets/marketing-1.png';
 import personalTrainerImage from '../assets/personal-trainer.png';
 import studentImage from '../assets/student.png';
+import AppleIcon from "@mui/icons-material/Apple";
+import StoreButton from "../components/StoreButton";
+import AndroidIcon from "@mui/icons-material/Android";
 
 export default function Marketing() {
   return (
@@ -59,28 +62,21 @@ export default function Marketing() {
             personalizados, avaliações completas e gestão inteligente do
             progresso.
           </Typography>
-
-          <Button
-            variant="contained"
-            sx={{
-              background: "linear-gradient(135deg, #bb86fc, #9c27b0)",
-              color: "#fff",
-              borderRadius: "12px",
-              padding: { xs: "12px 32px", md: "14px 40px" },
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              fontWeight: 600,
-              textTransform: "none",
-              transition: "all 0.3s ease",
-              width: { xs: "100%", sm: "auto" },
-              "&:hover": {
-                transform: "translateY(-3px)",
-                boxShadow: "0 20px 40px rgba(187, 134, 252, 0.3)",
-              },
-            }}
-          >
-            Baixar App
-          </Button>
-        </Box>
+          <Box sx={{display:'flex', flexDirection:"row", gap:'1.5rem'}}>
+            <StoreButton
+              icon={<AppleIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar na"
+              subtitle="App Store"
+              url="https://apps.apple.com/br/app/cammove/id6753191514"
+            />
+            <StoreButton
+              icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar no"
+              subtitle="Google Play"
+              url="https://play.google.com/store/apps/details?id=com.cammove"
+            />
+          </Box>
+ </Box>
 
         {/* Imagem */}
         <Box
@@ -285,23 +281,22 @@ export default function Marketing() {
                   </Typography>
                 </Box>
 
-                {/* CTA Button */}
-                <Button variant="contained" fullWidth sx={{
-                  background: "linear-gradient(135deg, #bb86fc, #9c27b0)",
-                  color: "#fff",
-                  borderRadius: "12px",
-                  padding: "14px 32px",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  textTransform: "none",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-3px)",
-                    boxShadow: "0 20px 40px rgba(187, 134, 252, 0.3)",
-                  },
-                }}>
-                  Baixar CamMove Agora
-                </Button>
+          
+                
+        <Box sx={{display:'flex', flexDirection:"row", gap:'1.5rem'}}>
+            <StoreButton
+              icon={<AppleIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar na"
+              subtitle="App Store"
+              url="https://apps.apple.com/br/app/cammove/id6753191514"
+            />
+            <StoreButton
+              icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar no"
+              subtitle="Google Play"
+              url="https://play.google.com/store/apps/details?id=com.cammove"
+            />
+          </Box>
               </Box>
             </Card>
           </Box>
@@ -570,22 +565,22 @@ export default function Marketing() {
         }}>
           Comece sua transformação agora
         </Typography>
-        <Button variant="contained" sx={{
-          background: "linear-gradient(135deg, #bb86fc, #9c27b0)",
-          color: "#fff",
-          borderRadius: "12px",
-          padding: "16px 50px",
-          fontSize: "1.1rem",
-          fontWeight: 600,
-          textTransform: "none",
-          transition: "all 0.3s ease",
-          "&:hover": {
-            transform: "translateY(-3px)",
-            boxShadow: "0 20px 40px rgba(187, 134, 252, 0.3)",
-          },
-        }}>
-          Baixar CamMove
-        </Button>
+   
+        
+        <Box sx={{display:'flex', flexDirection:"row", gap:'1.5rem', width:'100%', justifyContent:'center'}}>
+            <StoreButton
+              icon={<AppleIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar na"
+              subtitle="App Store"
+              url="https://apps.apple.com/br/app/cammove/id6753191514"
+            />
+            <StoreButton
+              icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
+              title="Baixar no"
+              subtitle="Google Play"
+              url="https://play.google.com/store/apps/details?id=com.cammove"
+            />
+          </Box>
       </Box>
     </Box>
   );
