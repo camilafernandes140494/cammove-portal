@@ -175,12 +175,53 @@ export default function Marketing() {
               <Box sx={{ textAlign: "center" }}>
                 <Typography variant="h5" sx={{
                   fontWeight: 700,
-                  mb: 3,
+                  mb: 2,
                   color: "#bb86fc",
                   fontSize: "1.5rem",
                 }}>
                   CamMove Premium
                 </Typography>
+
+                {/* Tags de IA */}
+                <Box sx={{ 
+                  display: "flex", 
+                  flexWrap: "wrap", 
+                  gap: 1, 
+                  justifyContent: "center", 
+                  mb: 3 
+                }}>
+                  <Box sx={{
+                    background: "linear-gradient(135deg, #00D4FF, #0099CC)",
+                    color: "#fff",
+                    px: 2,
+                    py: 0.75,
+                    borderRadius: "20px",
+                    fontWeight: 700,
+                    fontSize: "0.75rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.5px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 0.5,
+                    boxShadow: "0 4px 12px rgba(0, 212, 255, 0.3)",
+                  }}>
+                    🤖 Treinos com IA
+                  </Box>
+                  <Box sx={{
+                    background: "linear-gradient(135deg, #FFD700, #FFA500)",
+                    color: "#000",
+                    px: 2,
+                    py: 0.75,
+                    borderRadius: "20px",
+                    fontWeight: 700,
+                    fontSize: "0.75rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.5px",
+                    boxShadow: "0 4px 12px rgba(255, 215, 0, 0.3)",
+                  }}>
+                    ⚡ Novo
+                  </Box>
+                </Box>
 
                 {/* Preço */}
                 <Box sx={{ mb: 3 }}>
@@ -233,7 +274,7 @@ export default function Marketing() {
                 <Box sx={{ mb: 4, display: "flex", flexDirection: "column", gap: 1.5 }}>
                   {[
                     "Acesso completo a todos os exercícios",
-                    "Criação de treinos personalizados",
+                    "Criação de treinos personalizados com IA 🤖",
                     "Criação de avaliações físicas personalizadas",
                     "Agendamentos e lembretes",
                     "Suporte ao cliente",
