@@ -73,7 +73,7 @@ export default function Marketing() {
               icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
               title="Baixar no"
               subtitle="Google Play"
-              url="https://play.google.com/store/apps/details?id=com.cammove"
+              url="https://play.google.com/store/apps/details?id=com.camilafernandessilva.cammove"
             />
           </Box>
  </Box>
@@ -251,7 +251,7 @@ export default function Marketing() {
                     fontWeight: 900,
                     color: "#fff",
                   }}>
-                    R$ 29,99
+                    R$ 24,99
                   </Typography>
                   <Typography sx={{
                     fontSize: "0.9rem",
@@ -335,7 +335,7 @@ export default function Marketing() {
               icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
               title="Baixar no"
               subtitle="Google Play"
-              url="https://play.google.com/store/apps/details?id=com.cammove"
+              url="https://play.google.com/store/apps/details?id=com.camilafernandessilva.cammove"
             />
           </Box>
               </Box>
@@ -619,7 +619,7 @@ export default function Marketing() {
               icon={<AndroidIcon sx={{ fontSize: "32px" }} />}
               title="Baixar no"
               subtitle="Google Play"
-              url="https://play.google.com/store/apps/details?id=com.cammove"
+              url="https://play.google.com/store/apps/details?id=com.camilafernandessilva.cammove"
             />
           </Box>
       </Box>
