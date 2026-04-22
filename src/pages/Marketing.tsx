@@ -232,7 +232,7 @@ export default function Marketing() {
                       color: "#e0e0e0",
                       textDecoration: "line-through",
                     }}>
-                      R$ 59,99
+                      R$ 49,99
                     </Typography>
                     <Typography sx={{
                       fontSize: "0.85rem",
